@@ -1,0 +1,140 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        x:Class="ExamSQL.MainViewModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="699*"/>
+        </Grid.ColumnDefinitions>
+        <ComboBox HorizontalAlignment="Left" Margin="42,105,0,0" VerticalAlignment="Top" Width="120" StaysOpenOnEdit="True" IsReadOnly="True" SelectedItem="{Binding ElementName=comboBoxItem, Mode=OneWay}" Grid.ColumnSpan="2">
+            <ComboBoxItem x:Name="comboBoxItem" Content="Задание 1"/>
+            <ComboBoxItem Content="Задание 2"/>
+            <ComboBoxItem Content="Задание 3"/>
+            <ComboBoxItem Content="Задание 4"/>
+            <ComboBoxItem Content="Задание 5"/>
+            <ComboBoxItem Content="Задание 6"/>
+            <ComboBoxItem Content="Задание 7"/>
+            <ComboBoxItem Content="Задание 8"/>
+        </ComboBox>
+        <Label Content="Номер задания" HorizontalAlignment="Left" Margin="55,79,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.963,-0.316" Grid.ColumnSpan="2"/>
+        <Label Content="Текст задания" HorizontalAlignment="Left" Margin="59,175,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.044,-0.087" Grid.ColumnSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="77,201,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <TextBox HorizontalAlignment="Left" Margin="211,107,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+        <TabControl Grid.ColumnSpan="2">
+            <TabItem x:Name="Task1" Header="Задание 1">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="ProgramEnter1" HorizontalAlignment="Left" Margin="23,86,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Введите название обр. программы" HorizontalAlignment="Left" Margin="23,60,0,0" VerticalAlignment="Top" Height="26" Width="206"/>
+                    <Button x:Name="Send1" Content="Отправить запрос" HorizontalAlignment="Left" Margin="23,141,0,0" VerticalAlignment="Top" Background="White" Height="23" Width="120" ClickMode="Press" Click="Send1_Click" CommandParameter="{Binding Text, ElementName=ProgramEnter1}"/>
+                    <TextBlock x:Name="Output1" HorizontalAlignment="Left" Margin="336,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" Background="White"><Run Text="..."/><LineBreak/><Run/></TextBlock>
+                    <Label Content="Вывод" HorizontalAlignment="Left" Margin="336,39,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="23,230,0,0" TextWrapping="Wrap" Text="1. Вывести абитуриентов, которые хотят поступать на определенную образовательную программу." VerticalAlignment="Top" Height="56" Width="220"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Task2" Header="Задание 2">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="ProgramEnter2" HorizontalAlignment="Left" Margin="23,86,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
+                    <Label HorizontalAlignment="Left" Margin="23,60,0,0" VerticalAlignment="Top" Height="26" Width="206" Content="Введите название предмета по ЕГЭ"/>
+                    <Button x:Name="Send2" Content="Отправить запрос" HorizontalAlignment="Left" Margin="23,141,0,0" VerticalAlignment="Top" Background="White" Height="23" Width="120" ClickMode="Press" Click="Send2_Click" CommandParameter="{Binding Text, ElementName=ProgramEnter2}"/>
+                    <TextBlock x:Name="Output2" HorizontalAlignment="Left" Margin="336,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" Background="White"><Run Text="..."/><LineBreak/><Run/></TextBlock>
+                    <Label Content="Вывод" HorizontalAlignment="Left" Margin="336,39,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="23,203,0,0" TextWrapping="Wrap" Text="2. Вывести образовательные программы, на которые для поступления необходим определенный предмет ЕГЭ." VerticalAlignment="Top" Height="96" Width="154"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Task3" Header="Задание 3">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="Send3" Content="Отправить запрос" HorizontalAlignment="Left" Margin="23,141,0,0" VerticalAlignment="Top" Background="White" Height="23" Width="120" ClickMode="Press" Click="Send3_Click"/>
+                    <TextBlock x:Name="Output3" HorizontalAlignment="Left" Margin="336,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" Background="White"><Run Text="..."/><LineBreak/><Run/></TextBlock>
+                    <Label Content="Вывод" HorizontalAlignment="Left" Margin="336,39,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="23,203,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="119" Width="161"><Run Text="3. Вывести статистическую информацию по каждому предмету ЕГЭ (минимальный и максимальный балл, количество абитуриентов, которые этот предмет сдавали)."/><LineBreak/><Run/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Task4" Header="Задание 4">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="154*"/>
+                        <ColumnDefinition Width="243*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="ProgramEnter4" HorizontalAlignment="Left" Margin="23,86,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
+                    <Label HorizontalAlignment="Left" Margin="23,60,0,0" VerticalAlignment="Top" Height="26" Width="206" Content="Введите порог значений баллов"/>
+                    <Button x:Name="Send4" Content="Отправить запрос" HorizontalAlignment="Left" Margin="23,141,0,0" VerticalAlignment="Top" Background="White" Height="23" Width="120" ClickMode="Press" Click="Send4_Click" CommandParameter="{Binding Text, ElementName=ProgramEnter4}"/>
+                    <TextBlock x:Name="Output4" HorizontalAlignment="Left" Margin="28,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" Background="White" Grid.Column="1"><Run Text="..."/><LineBreak/><Run/></TextBlock>
+                    <Label Content="Вывод" HorizontalAlignment="Left" Margin="28,39,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="23,230,0,0" TextWrapping="Wrap" Text="4. Вывести образовательные программы, минимальные баллы по каждому предмету которых, превышают заданное значение." VerticalAlignment="Top" Height="70" Width="222"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Task5" Header="Задание 5">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="ProgramEnter5" HorizontalAlignment="Left" Margin="23,86,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
+                    <Label HorizontalAlignment="Left" Margin="23,60,0,0" VerticalAlignment="Top" Height="26" Width="239" Content="Введите значение фильтра для программ"/>
+                    <Button x:Name="Send5" Content="Отправить запрос" HorizontalAlignment="Left" Margin="23,141,0,0" VerticalAlignment="Top" Background="White" Height="23" Width="120" ClickMode="Press" Click="Send5_Click" CommandParameter="{Binding Text, ElementName=ProgramEnter5}"/>
+                    <TextBlock x:Name="Output5" HorizontalAlignment="Left" Margin="336,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" Background="White"><Run Text="..."/><LineBreak/><Run/></TextBlock>
+                    <Label Content="Вывод" HorizontalAlignment="Left" Margin="336,39,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="23,230,0,0" TextWrapping="Wrap" Text="5. Вывести образовательные программы. которые имеют самый большой план набора." VerticalAlignment="Top" Height="70" Width="222"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Task6" Header="Задание 6">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="155*"/>
+                        <ColumnDefinition Width="242*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="Send6" Content="Отправить запрос" HorizontalAlignment="Left" Margin="23,141,0,0" VerticalAlignment="Top" Background="White" Height="23" Width="120" ClickMode="Press" Click="Send6_Click" CommandParameter="{Binding Text, ElementName=ProgramEnter6}"/>
+                    <TextBlock x:Name="Output6" HorizontalAlignment="Left" Margin="26,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" Background="White" Grid.Column="1"><Run Text="..."/><LineBreak/><Run/></TextBlock>
+                    <Label Content="Вывод" HorizontalAlignment="Left" Margin="26,39,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="23,230,0,0" TextWrapping="Wrap" Text="6. Посчитать, сколько дополнительных баллов получит каждый абитуриент." VerticalAlignment="Top" Height="70" Width="222"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Task7" Header="Задание 7">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="Send7" Content="Отправить запрос" HorizontalAlignment="Left" Margin="23,141,0,0" VerticalAlignment="Top" Background="White" Height="23" Width="120" ClickMode="Press" Click="Send7_Click" CommandParameter="{Binding Text, ElementName=ProgramEnter7}"/>
+                    <TextBlock x:Name="Output7" HorizontalAlignment="Left" Margin="336,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" Background="White"><Run Text="..."/><LineBreak/><Run/></TextBlock>
+                    <Label Content="Вывод" HorizontalAlignment="Left" Margin="336,39,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="23,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="222"><Run Text="7. Посчитать конкурс на каждую образовательную программу."/><LineBreak/><Run/></TextBlock>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Task8" Header="Задание 8">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="177*"/>
+                        <ColumnDefinition Width="220*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="ProgramEnter8" HorizontalAlignment="Left" Margin="23,60,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
+                    <Label HorizontalAlignment="Left" Margin="23,34,0,0" VerticalAlignment="Top" Height="26" Width="239" Content="Введите ЕГЭ №1"/>
+                    <Button x:Name="Send8" Content="Отправить запрос" HorizontalAlignment="Left" Margin="23,141,0,0" VerticalAlignment="Top" Background="White" Height="23" Width="120" ClickMode="Press" Click="Send8_Click" CommandParameter="{Binding Text, ElementName=ProgramEnter8}"/>
+                    <TextBlock x:Name="Output8" HorizontalAlignment="Left" Margin="336,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" Background="White" Grid.ColumnSpan="2"><Run Text="..."/><LineBreak/><Run/></TextBlock>
+                    <Label Content="Вывод" HorizontalAlignment="Left" Margin="336,39,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="23,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="222"><Run Text="8. Вывести образовательные программы, на которые для поступления необходимы два определенных предмета ЕГЭ."/><LineBreak/><Run/></TextBlock>
+                    <TextBox x:Name="ProgramEnter8_Copy" HorizontalAlignment="Left" Margin="23,104,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Width="120"/>
+                    <Label HorizontalAlignment="Left" Margin="23,78,0,0" VerticalAlignment="Top" Height="26" Width="239" Content="Введите ЕГЭ №2"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Task9" Header="Задание 9">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="97*"/>
+                        <ColumnDefinition Width="697*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="Send9" Content="Отправить запрос" HorizontalAlignment="Left" Margin="23,141,0,0" VerticalAlignment="Top" Background="White" Height="23" Width="120" ClickMode="Press" Click="Send9_Click" CommandParameter="{Binding Text, ElementName=ProgramEnter9}" Grid.ColumnSpan="2"/>
+                    <TextBlock x:Name="Output9" HorizontalAlignment="Left" Margin="239,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" Background="White" Grid.Column="1"><Run Text="..."/><LineBreak/><Run/></TextBlock>
+                    <Label Content="Вывод" HorizontalAlignment="Left" Margin="239,39,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="23,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="222" Grid.ColumnSpan="2" Text="10. Вывести абитуриентов, которые не могут быть зачислены на образовательную программу."/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="Task10" Header="Задание 10">
+                <Grid Background="#FFE5E5E5">
+                    <Button x:Name="Send10" Content="Отправить запрос" HorizontalAlignment="Left" Margin="23,141,0,0" VerticalAlignment="Top" Background="White" Height="23" Width="120" ClickMode="Press" Click="Send10_Click" CommandParameter="{Binding Text, ElementName=ProgramEnter10}"/>
+                    <TextBlock x:Name="Output10" HorizontalAlignment="Left" Margin="336,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="421" Background="White"><Run Text="..."/><LineBreak/><Run/></TextBlock>
+                    <Label Content="Вывод" HorizontalAlignment="Left" Margin="336,39,0,0" VerticalAlignment="Top"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="23,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="70" Width="222" Text="9. Посчитать количество баллов каждого абитуриента на каждую образовательную программу по результатам ЕГЭ."/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
