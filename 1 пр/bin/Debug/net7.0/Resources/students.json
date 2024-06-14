@@ -1,0 +1,35 @@
+{
+    "Students": [
+        {
+            "StudentID": 0,
+            "StudentName": "B",
+            "StudentSurname": "A",
+            "StudentPatronimic": "C"
+        }
+    ],
+    "Subjects": [
+        {
+            "SubjectID": 0,
+            "SubjectName": "\u041C\u0430\u0442\u0430\u043D",
+            "LecturesVolume": 5,
+            "PracticeVolume": 5
+        }
+    ],
+    "StudentPlan": [
+        {
+            "StudentID": 0,
+            "SubjectID": 0,
+            "Grade": 5
+        },
+        {
+            "StudentID": 0,
+            "SubjectID": 0,
+            "Grade": 5
+        },
+        {
+            "StudentID": 0,
+            "SubjectID": 0,
+            "Grade": 3
+        }
+    ]
+}

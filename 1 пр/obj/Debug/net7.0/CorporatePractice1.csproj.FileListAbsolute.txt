@@ -1,0 +1,15 @@
+C:\Users\Falcion\source\repos\CorporatePractice1\bin\Debug\net7.0\CorporatePractice1.exe
+C:\Users\Falcion\source\repos\CorporatePractice1\bin\Debug\net7.0\CorporatePractice1.deps.json
+C:\Users\Falcion\source\repos\CorporatePractice1\bin\Debug\net7.0\CorporatePractice1.runtimeconfig.json
+C:\Users\Falcion\source\repos\CorporatePractice1\bin\Debug\net7.0\CorporatePractice1.dll
+C:\Users\Falcion\source\repos\CorporatePractice1\bin\Debug\net7.0\CorporatePractice1.pdb
+C:\Users\Falcion\source\repos\CorporatePractice1\obj\Debug\net7.0\CorporatePractice1.csproj.AssemblyReference.cache
+C:\Users\Falcion\source\repos\CorporatePractice1\obj\Debug\net7.0\CorporatePractice1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Falcion\source\repos\CorporatePractice1\obj\Debug\net7.0\CorporatePractice1.AssemblyInfoInputs.cache
+C:\Users\Falcion\source\repos\CorporatePractice1\obj\Debug\net7.0\CorporatePractice1.AssemblyInfo.cs
+C:\Users\Falcion\source\repos\CorporatePractice1\obj\Debug\net7.0\CorporatePractice1.csproj.CoreCompileInputs.cache
+C:\Users\Falcion\source\repos\CorporatePractice1\obj\Debug\net7.0\CorporatePractice1.dll
+C:\Users\Falcion\source\repos\CorporatePractice1\obj\Debug\net7.0\refint\CorporatePractice1.dll
+C:\Users\Falcion\source\repos\CorporatePractice1\obj\Debug\net7.0\CorporatePractice1.pdb
+C:\Users\Falcion\source\repos\CorporatePractice1\obj\Debug\net7.0\CorporatePractice1.genruntimeconfig.cache
+C:\Users\Falcion\source\repos\CorporatePractice1\obj\Debug\net7.0\ref\CorporatePractice1.dll
