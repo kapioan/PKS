@@ -1,0 +1,37 @@
+﻿@model PKS4.Models.Data.User
+
+@{
+    ViewData["Title"] = "Registration Form";
+}
+
+<h2>Registration Form</h2>
+
+<form asp-action="Register">
+    <div>
+        <label asp-for="Login">Login:</label>
+        <input asp-for="Login" class="form-control" />
+        <span asp-validation-for="Login" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Password">Password:</label>
+        <input asp-for="Password" type="password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="Surname">Surname:</label>
+        <input asp-for="Surname" class="form-control" />
+    </div>
+    <div>
+        <label asp-for="MiddleName">Middle Name:</label>
+        <input asp-for="MiddleName" class="form-control" />
+    </div>
+    <button type="submit">Register</button>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
